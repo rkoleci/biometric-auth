@@ -17,13 +17,11 @@ export const draw = (predictions, ctx) => {
         }
       }
 
-};
+}; 
 
-export const drawCircle = (centerX, centerY, ctx) => {
+export function drawCircle(ctx, centerX, centerY, radius) {
   ctx.beginPath();
-  ctx.arc(centerX, centerY, 50, 0, 2 * Math.PI);
-  ctx.fillStyle = "blue"; // Change the color of the circle here
+  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+  ctx.fillStyle = 'blue'; // Change color if desired
   ctx.fill();
-  ctx.closePath();
 }
- 
