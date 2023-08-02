@@ -1,5 +1,5 @@
 // Drawing function
-const draw = (predictions, ctx) => {
+export const draw = (predictions, ctx) => {
     if (predictions.length > 0) {
         
         for (let i = 0; i < predictions.length; i++) {
@@ -19,4 +19,11 @@ const draw = (predictions, ctx) => {
 
 };
 
-export default draw
+export const drawCircle = (centerX, centerY, ctx) => {
+  ctx.beginPath();
+  ctx.arc(centerX, centerY, 50, 0, 2 * Math.PI);
+  ctx.fillStyle = "blue"; // Change the color of the circle here
+  ctx.fill();
+  ctx.closePath();
+}
+ 
